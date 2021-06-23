@@ -1,6 +1,15 @@
-class Solution
+class Main
 {
-    void merge(int arr[], int l, int m, int r)
+    public static void main(String args[]){
+      int arr[] = {5,2,6,9,1,4};
+      int l = 0;
+      int r = arr.length - 1;
+      mergeSort(arr, l, r);
+      for(int key : arr){
+        System.out.print(key+" ");
+      }
+    }
+    public static void merge(int arr[], int l, int m, int r)
     {
          // Your code here
         int n1 = m - l + 1;
@@ -31,7 +40,7 @@ class Solution
             arr[k++] = R[j++];
         }
     }
-    void mergeSort(int arr[], int l, int r)
+    public static void mergeSort(int arr[], int l, int r)
     {
         //code here
         if (l < r) {
